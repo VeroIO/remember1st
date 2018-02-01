@@ -1,10 +1,10 @@
 <?php 
 require_once '../includes/header.php';
-require_once '../module/m_mm.php';
-$username=$_SESSION["mm_info"];
-$m_mm = new m_mm();
-$mm_info=$m_mm->user_info($username);
-$canchangeinfo=$mm_info->fstlogin;
+require_once '../module/m_user.php';
+$username=$_SESSION["user_info"];
+$m_user = new m_user();
+$user_info=$m_user->user_info($username);
+$canchangeinfo=$user_info->fstLogin;
  ?>
         <div class="col-md-6 col-md-offset-3">
             <div id="content">

@@ -1,5 +1,5 @@
 <?php 
-require_once '../module/m_mm.php';
+require_once '../module/m_user.php';
 require_once '../controller/c_password.php';
 ob_start();
 session_start();
@@ -8,7 +8,7 @@ session_start();
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Login |Autolike24h System</title>
+        <title>Login |Remember1st System</title>
         <!-- Mobile specific metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <!-- Force IE9 to render in normal mode -->
@@ -41,7 +41,7 @@ session_start();
             <div class="row">
                 <div class="navbar">
                     <div class="container text-center">
-                        <a class="navbar-brand" href="index.html">Sàn Giao Dịch<span class="slogan">.</span></a>
+                        <a class="navbar-brand" href="index.html">Remember1st<span class="slogan">.</span></a>
                     </div>
                 </div>
                 <!-- /navbar -->
@@ -106,7 +106,7 @@ session_start();
                 <div class="panel-footer gray-lighter-bg">
                     <h4 class="text-center"><strong>Don`t have an account ?</strong>
                     </h4>
-                    <p class="text-center"><a href="#" class="btn btn-success">Create account</a>
+                    <p class="text-center"><a href="dangki.html" class="btn btn-success">Create account</a>
                     </p>
                 </div>
             </div>
@@ -146,26 +146,19 @@ session_start();
 $username=$_POST['username'];
 $password=$_POST['password'];
 
-
-$result=decrypt_password($salt,$password,$dbpassword);
-if($result==true){
-
-}else{
-    
-}
 if($_POST["username"]&&$_POST['password']){
         if($username && $password)
         {
-            $m_mm=new m_mm();
-            $mm_info=$m_mm->user_info($username);
-            if($mm_info)
+            $m_user=new m_user();
+            $user_info=$m_user->user_info($username);
+            if($user_info)
             {
-                $salt=$mm_info->salt;
-                $dbpassword=$mm_info->password;
+                $salt=$user_info->salt;
+                $dbpassword=$user_info->password;
                 $password=decrypt_password($salt,$password,$dbpassword);
                 if($password==true)
                 {
-                    $_SESSION["mm_info"] = $mm_info->username;
+                    $_SESSION["user_info"] = $user_info->username;
                     exit(header('Location: index.html'));
                 }
                 else

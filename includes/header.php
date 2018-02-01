@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    if(!isset($_SESSION["mm_info"])){
+    if(!isset($_SESSION["user_info"])){
         header('Location: dangnhap.html');
     }
  ?>
@@ -10,7 +10,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Sàn Giao Dịch|Quản Lí</title>
+    <title>Remember1st|Quản Lí</title>
     <!-- Mobile specific metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Force IE9 to render in normal mode -->
@@ -49,7 +49,7 @@
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="index.html">
-                Sàn Giao Dịch<span class="slogan">.</span>
+                Remember1st<span class="slogan">.</span>
             </a>
                 </div>
                 <div id="navbar-no-collapse" class="navbar-no-collapse">

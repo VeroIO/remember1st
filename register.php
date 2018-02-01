@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="navbar">
                     <div class="container text-center">
-                        <a class="navbar-brand" href="http://demos.getbootstrapkit.com/supr/dashboard.html">Supr.<span class="slogan">admin</span></a>
+                        <a class="navbar-brand" href="http://demos.getbootstrapkit.com/supr/dashboard.html">Remember1st<span class="slogan">.</span></a>
                     </div>
                 </div>
                 <!-- /navbar -->
@@ -93,7 +93,7 @@
                 <div class="panel-footer gray-lighter-bg">
                     <h4 class="text-center"><strong>Already have an account ?</strong>
                     </h4>
-                    <p class="text-center"><a href="login.html" class="btn btn-primary">Sign in</a>
+                    <p class="text-center"><a href="dangnhap.html" class="btn btn-primary">Sign in</a>
                     </p>
                 </div>
             </div>
