@@ -116,7 +116,7 @@
                                             <span class="msg">I have question about new function ...</span>
                                         </li>
                                         <li>
-                                            <span class="icon avatar"><img src="img/avatar.png" alt="" /></span>
+                                            <span class="icon avatar"><img src="img/avatar.jpg" alt="" /></span>
                                             <span class="name"><a data-toggle="modal" href="index.html#myModal1"><strong>George Michael</strong></a><span class="time">1 hour ago</span></span>
                                             <span class="msg">I need to meet you urgent please call me ...</span>
                                         </li>
@@ -167,7 +167,7 @@
                         </li>
                         <li class="dropdown">
                             <a href="index.html#" class="dropdown-toggle avatar" data-toggle="dropdown">
-                                <img src="img/avatar.png" alt="" class="image" />
+                                <img src="img/avatar.jpg" alt="" class="image" />
                                 <span class="txt">admin@supr.com</span>
                                 <b class="caret"></b>
                             </a>
@@ -228,7 +228,7 @@
                                     <li><a href="index.html"><i class="s16 icomoon-icon-screen-2"></i><span class="txt">Dashboard</span> </a>
                                     </li>
                                     <li>
-                                        <a href="quanligiaodich.html"><i class="s16 icomoon-icon-map"></i><span class="txt">Quản Lí Giao Dịch</span></a>
+                                        <a href="quanligiaodich.html"><i class="s16 icomoon-icon-map"></i><span class="txt">Tài Khoản</span></a>
                                     </li>
                                 </ul>
                             </div>

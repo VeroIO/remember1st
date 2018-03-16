@@ -15,8 +15,8 @@
 	        $result = $this->loadRow();
 	        return $result;
 		}
-		function update_info($username,$midman_name,$midman_fbid,$midman_fb){
-			$sql = "update user set fstlogin='1',midman_name='$midman_name',midman_fbid='$midman_fbid',midman_fb='$midman_fb' where username='$username'";
+		function update_fstLogin($username,$fullname,$secret_key){
+			$sql = "update user set fstlogin='1',fullname='$fullname',secretKey='$secret_key' where username='$username'";
 			$this->setQuery($sql);
 			$result = $this->execute(array($username));
 			return $result;
