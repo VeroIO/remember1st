@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 01, 2018 at 12:44 PM
+-- Generation Time: Mar 16, 2018 at 04:29 PM
 -- Server version: 5.6.31
 -- PHP Version: 5.6.25
 
@@ -29,6 +29,8 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
+  `fullname` varchar(255) NOT NULL,
+  `secretKey` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `salt` varchar(255) NOT NULL,
   `fstLogin` varchar(255) NOT NULL,
@@ -40,8 +42,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `salt`, `fstLogin`, `active`, `role`) VALUES
-(1, 'hellcatvn', '9dd83a31f2972727d05c5d8d3ccf58cd', '2374531865a7308e9985db4.67477433', '0', '1', 'user');
+INSERT INTO `user` (`id`, `username`, `fullname`, `secretKey`, `password`, `salt`, `fstLogin`, `active`, `role`) VALUES
+(1, 'hellcatvn', 'Trần Quốc Long', '22011304', '9dd83a31f2972727d05c5d8d3ccf58cd', '2374531865a7308e9985db4.67477433', '1', '1', 'user');
 
 --
 -- Indexes for dumped tables
