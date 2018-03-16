@@ -2,6 +2,12 @@
     session_start();
     if(!isset($_SESSION["user_info"])){
         header('Location: dangnhap.html');
+    }else{
+        require_once '../module/m_user.php';
+        $username=$_SESSION["user_info"];
+        $m_user = new m_user();
+        $user_info=$m_user->user_info($username);
+        $role=$user_info->role;    
     }
  ?>
 <!doctype html>
@@ -213,8 +219,6 @@
                         </li>
                     </ul>
                 </div>
-                <!-- End search -->
-                <!-- Start .sidebar-inner -->
                 <div class="sidebar-inner">
                     <!-- Start .sidebar-scrollarea -->
                     <div class="sidebar-scrollarea">
@@ -228,7 +232,10 @@
                                     <li><a href="index.html"><i class="s16 icomoon-icon-screen-2"></i><span class="txt">Dashboard</span> </a>
                                     </li>
                                     <li>
-                                        <a href="quanligiaodich.html"><i class="s16 icomoon-icon-map"></i><span class="txt">Tài Khoản</span></a>
+                                        <a href="cm.html"><i class="fa fa-list"></i><span class="txt">Categories</span></a>
+                                    </li>                                    
+                                    <li>
+                                        <a href="#"><i class="fa fa-users"></i><span class="txt">Secured Place</span></a>
                                     </li>
                                 </ul>
                             </div>

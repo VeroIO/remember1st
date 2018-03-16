@@ -1,9 +1,5 @@
 <?php 
 require_once '../includes/header.php';
-require_once '../module/m_user.php';
-$username=$_SESSION["user_info"];
-$m_user = new m_user();
-$user_info=$m_user->user_info($username);
 $canchangeinfo=$user_info->fstLogin;
  ?>
         <div class="col-md-6 col-md-offset-3">
